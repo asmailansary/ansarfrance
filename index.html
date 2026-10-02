@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>هقَّوة | مقهى ومحمصة</title>
+<meta name="description" content="مقهى ومحمصة هقوة — نحضر القهوة ونصنع اللحظة. مفتوح على مدار 24 ساعة في العليا وطويق.">
+<meta name="theme-color" content="#6a704c">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&family=Reem+Kufi:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ستارة الانتقال / شاشة التحميل -->
+<div class="curtain" id="curtain" aria-hidden="true">
+  <img src="assets/logo-cream.png" alt="" class="curtain-logo" data-logo="cream">
+</div>
+
+<!-- الشريط العلوي -->
+<header class="topbar" id="topbar">
+  <a href="#home" class="brand" aria-label="هقوة">
+    <img src="assets/logo-green.png" alt="هقَّوة" id="brandLogo" data-logo="main">
+    <span class="brand-name" id="brandName">هقَّوة</span>
+  </a>
+  <nav class="nav" id="nav">
+    <a href="#home" data-t="nav.home"></a>
+    <a href="#menu" data-t="nav.menu" data-sec="menu"></a>
+    <a href="#offers" data-t="nav.offers" data-sec="offers"></a>
+    <a href="#gallery" data-t="nav.gallery" data-sec="gallery"></a>
+    <a href="#branches" data-t="nav.branches" data-sec="branches"></a>
+    <a href="#contact" data-t="nav.contact" data-sec="contact"></a>
+  </nav>
+  <div class="actions">
+    <button class="pill" id="langBtn" type="button" aria-label="Language">EN</button>
+    <button class="icon-btn" id="cartBtn" type="button" aria-label="السلة">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h13l-1.5 9h-10z"/><path d="M6 7 5 3H2"/><circle cx="9" cy="20" r="1.2"/><circle cx="16" cy="20" r="1.2"/></svg>
+      <b class="badge" id="cartCount">0</b>
+    </button>
+    <button class="pill solid" id="accountBtn" type="button"></button>
+    <button class="burger" id="burger" type="button" aria-label="Menu"><i></i><i></i></button>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ الواجهة ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg"><span class="blob b1"></span><span class="blob b2"></span></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="kicker" data-t="hero.kicker" data-reveal></p>
+      <h1 class="hero-slogan" data-reveal><span data-t="hero.slogan"></span></h1>
+      <p class="hero-about" data-reveal><span data-t="hero.about1"></span><br><span data-t="hero.about2"></span></p>
+      <div class="hero-cta" data-reveal>
+        <a class="btn solid" href="#menu" data-t="hero.cta1" data-sec="menu"></a>
+        <a class="btn ghost" id="heroKeeta" href="#" target="_blank" rel="noopener" data-t="hero.cta2"></a>
+      </div>
+    </div>
+    <div class="dial-wrap" data-reveal>
+      <div class="dial" id="dial">
+        <svg viewBox="0 0 400 400" class="dial-svg" aria-hidden="true">
+          <g id="ticks"></g>
+          <g id="nums"></g>
+                    <g id="hand" class="hand"><line x1="200" y1="58" x2="200" y2="36"/><circle cx="200" cy="26" r="10"/></g>
+        </svg>
+        <div class="dial-core">
+          <img src="assets/logo-cream.png" alt="هقَّوة" data-logo="cream" class="dial-logo">
+        </div>
+      </div>
+      <div class="now-chip"><span class="dot"></span><span data-t="hero.now"></span> <b id="nowTime">--:--</b></div>
+    </div>
+  </div>
+  <a href="#stats" class="scroll-hint"><span data-t="hero.scroll"></span><i></i></a>
+</section>
+
+<!-- ============ الأرقام ============ -->
+<section class="stats" id="stats" data-section="stats">
+  <div class="wrap stats-grid">
+    <div class="stat" data-reveal><div class="num"><span data-count data-t="stats.1.num"></span></div><p data-t="stats.1.label"></p></div>
+    <div class="stat" data-reveal><div class="num"><span data-count data-t="stats.2.num"></span></div><p data-t="stats.2.label"></p></div>
+    <div class="stat" data-reveal><div class="num"><span data-count data-t="stats.3.num"></span></div><p data-t="stats.3.label"></p></div>
+    <div class="stat" data-reveal><div class="num"><span data-count data-t="stats.4.num"></span></div><p data-t="stats.4.label"></p></div>
+  </div>
+</section>
+
+<!-- ============ القصة ============ -->
+<section class="story" id="story" data-section="story">
+  <div class="wrap story-grid">
+    <h2 class="display" data-t="story.title" data-reveal></h2>
+    <p class="lead" data-t="story.text" data-reveal></p>
+  </div>
+  <div class="wrap steps">
+    <div class="step" data-reveal><svg viewBox="0 0 48 48"><ellipse cx="24" cy="24" rx="12" ry="17" transform="rotate(35 24 24)"/><path d="M14 33c8-4 12-12 20-18" /></svg><span data-t="story.step1"></span></div>
+    <div class="step" data-reveal><svg viewBox="0 0 48 48"><path d="M24 40c-6-4-8-9-4-15 1 3 3 4 5 4-1-5 1-9 5-12 0 6 5 8 3 14-1 4-4 7-9 9z"/></svg><span data-t="story.step2"></span></div>
+    <div class="step" data-reveal><svg viewBox="0 0 48 48"><path d="M10 20h24v8a10 10 0 0 1-10 10h-4a10 10 0 0 1-10-10z"/><path d="M34 22h3a4 4 0 0 1 0 8h-4"/><path d="M17 8c-2 3 2 4 0 7M24 8c-2 3 2 4 0 7"/></svg><span data-t="story.step3"></span></div>
+    <div class="step" data-reveal><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="15"/><path d="M24 14v10l7 4"/></svg><span data-t="story.step4"></span></div>
+  </div>
+</section>
+
+<!-- ============ ساعة الهقوة (التمرير يغيّر الوقت) ============ -->
+<section class="clock" id="clock" data-section="time">
+  <div class="clock-sticky">
+    <div class="sky" id="sky"></div>
+    <div class="celestial" id="celestial"><i class="sun"></i></div>
+    <div class="wrap clock-inner">
+      <p class="kicker light" data-t="time.title"></p>
+      <h2 class="display light" data-t="time.sub"></h2>
+      <div class="phases" id="phases">
+        <article class="phase on"><h3 data-t="time.1.name"></h3><p data-t="time.1.text"></p></article>
+        <article class="phase"><h3 data-t="time.2.name"></h3><p data-t="time.2.text"></p></article>
+        <article class="phase"><h3 data-t="time.3.name"></h3><p data-t="time.3.text"></p></article>
+        <article class="phase"><h3 data-t="time.4.name"></h3><p data-t="time.4.text"></p></article>
+      </div>
+      <div class="phase-dots" id="phaseDots"><i class="on"></i><i></i><i></i><i></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ القائمة ============ -->
+<section class="menu section" id="menu" data-section="menu">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <h2 class="display" data-t="menu.title"></h2>
+      <p class="sub" data-t="menu.sub"></p>
+    </header>
+    <div class="chips" id="menuChips" data-reveal></div>
+    <div class="grid" id="menuGrid"></div>
+  </div>
+</section>
+
+<!-- ============ العروض ============ -->
+<section class="offers section tint" id="offers" data-section="offers">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <h2 class="display" data-t="offers.title"></h2>
+      <p class="sub" data-t="offers.sub"></p>
+    </header>
+    <div class="offer-grid" id="offerGrid"></div>
+  </div>
+</section>
+
+<!-- ============ المعرض المتحرك ============ -->
+<section class="gallery section" id="gallery" data-section="gallery">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <h2 class="display" data-t="gallery.title"></h2>
+      <p class="sub" data-t="gallery.sub"></p>
+    </header>
+  </div>
+  <div class="marquee" id="marquee"><div class="track" id="track"></div></div>
+</section>
+
+<!-- ============ التوصيل ============ -->
+<section class="delivery" id="delivery" data-section="delivery">
+  <div class="wrap delivery-inner">
+    <div>
+      <p class="kicker light" data-t="delivery.kicker" data-reveal></p>
+      <h2 class="display light" data-t="delivery.title" data-reveal></h2>
+    </div>
+    <a class="keeta-card" id="keetaCard" href="#" target="_blank" rel="noopener" data-reveal>
+      <img src="assets/keeta.png" alt="Keeta" id="keetaLogo" onerror="this.replaceWith(Object.assign(document.createElement('b'),{textContent:'Keeta',className:'keeta-fallback'}))">
+      <span data-t="delivery.cta"></span>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ============ أوقات العمل ============ -->
+<section class="hours section" id="hours" data-section="hours">
+  <div class="wrap hours-inner" data-reveal>
+    <p class="kicker" data-t="hours.kicker"></p>
+    <p class="hours-text"><span data-t="hours.pre"></span> <u class="u24" data-t="hours.strong"></u></p>
+  </div>
+</section>
+
+<!-- ============ الفروع ============ -->
+<section class="branches section tint" id="branches" data-section="branches">
+  <div class="wrap">
+    <header class="sec-head" data-reveal><h2 class="display" data-t="branches.title"></h2></header>
+    <div class="branch-grid">
+      <a class="branch" id="brOlaya" href="#" target="_blank" rel="noopener" data-reveal>
+        <span class="pin"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+        <h3 data-t="branches.1.name"></h3>
+        <span class="go"><span data-t="branches.open"></span> ↗</span>
+      </a>
+      <a class="branch" id="brTuwaiq" href="#" target="_blank" rel="noopener" data-reveal>
+        <span class="pin"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+        <h3 data-t="branches.2.name"></h3>
+        <span class="go"><span data-t="branches.open"></span> ↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ التواصل ============ -->
+<section class="contact section" id="contact" data-section="contact">
+  <div class="wrap">
+    <header class="sec-head center" data-reveal>
+      <h2 class="display" data-t="contact.title"></h2>
+      <p class="sub" data-t="contact.sub"></p>
+    </header>
+    <div class="socials" id="socials" data-reveal></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <img src="assets/logo-cream.png" alt="هقَّوة" data-logo="cream">
+  <p data-t="footer.tag"></p>
+  <small data-t="footer.rights"></small>
+  <a class="admin-link" href="admin.html">·</a>
+</footer>
+
+<!-- شعار المناسبات (يُدار من لوحة التحكم) -->
+<div class="occasion" id="occasion" hidden><img alt="" id="occasionImg"></div>
+
+<!-- السلة -->
+<aside class="drawer" id="cartDrawer" aria-hidden="true">
+  <div class="drawer-head"><h3 id="cartTitle"></h3><button class="icon-btn" data-close type="button">✕</button></div>
+  <div class="drawer-body" id="cartBody"></div>
+  <div class="drawer-foot" id="cartFoot"></div>
+</aside>
+
+<!-- الحساب -->
+<aside class="drawer" id="accDrawer" aria-hidden="true">
+  <div class="drawer-head"><h3 id="accTitle"></h3><button class="icon-btn" data-close type="button">✕</button></div>
+  <div class="drawer-body" id="accBody"></div>
+</aside>
+<div class="scrim" id="scrim"></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/defaults.js"></script>
+<script src="js/common.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

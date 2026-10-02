@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>لوحة تحكم هقَّوة</title>
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&family=Reem+Kufi:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<!-- تسجيل الدخول -->
+<section class="login" id="login">
+  <div class="login-card">
+    <img src="assets/logo-cream.png" alt="هقَّوة" class="login-logo">
+    <h1>لوحة التحكم</h1>
+    <p class="muted" id="loginHint">سجّل دخولك بحساب الموظف الذي أنشأه المدير</p>
+    <form id="loginForm" autocomplete="on">
+      <label>اسم المستخدم<input id="lUser" autocomplete="username" required dir="ltr" placeholder="username"></label>
+      <label>كلمة المرور<input id="lPass" type="password" autocomplete="current-password" required dir="ltr" placeholder="••••••••"></label>
+      <button class="btn" id="loginBtn">دخول</button>
+    </form>
+    <form id="setupForm" hidden>
+      <p class="notice">لم يتم إنشاء أي مدير بعد. أنشئ حساب المدير الأول (يظهر هذا النموذج مرة واحدة فقط).</p>
+      <label>الاسم<input id="sName" required placeholder="مثال: أحمد"></label>
+      <label>اسم المستخدم (إنجليزي)<input id="sUser" required dir="ltr" pattern="[A-Za-z0-9._\-]{3,30}" placeholder="admin"></label>
+      <label>كلمة المرور (6 أحرف أو أكثر)<input id="sPass" type="password" minlength="6" required dir="ltr"></label>
+      <button class="btn">إنشاء حساب المدير</button>
+    </form>
+    <p class="err" id="loginErr" role="alert"></p>
+    <a class="back" href="index.html">← العودة للموقع</a>
+  </div>
+</section>
+
+<!-- التطبيق -->
+<div class="app" id="app" hidden>
+  <aside class="side" id="side">
+    <div class="side-top">
+      <img src="assets/logo-cream.png" alt="هقَّوة" class="side-logo" data-logo="light">
+    </div>
+    <nav class="tabs" id="tabs"></nav>
+    <div class="me">
+      <img id="meImg" alt="">
+      <div><b id="meName"></b><small id="meRole"></small></div>
+      <button class="ghost-btn" id="logout" title="خروج" style="width:auto;padding:0 10px;font-size:13px">خروج</button>
+    </div>
+  </aside>
+  <main class="main">
+    <div id="view"></div>
+  </main>
+</div>
+
+<div class="modal" id="modal" hidden><div class="modal-card" id="modalCard"></div></div>
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/defaults.js"></script>
+<script src="js/common.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
